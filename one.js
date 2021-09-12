@@ -1,5 +1,22 @@
-var my_name = prompt("你的名字")
-var my_age = "20"
-var is_male = true
+function play() {
+    const audio = document.createElement("audio");
+    audio.src = "./music/BGM.mp3";
+    audio.play().then(function(){
+        var my_name = prompt("你好！你叫甚麼名字")
+        var yes = confirm('白白是你老婆嗎？');
 
-document.write("我的名字叫做" + my_name)
+        if (!yes) {
+            window.close()
+        } else{
+            if (my_name === '史萊姆') {
+                document.write('沒錯！')
+            } else { 
+                alert('該醒了')
+            }
+            audio.pause()
+        }
+
+        
+    });
+    
+}
